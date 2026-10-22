@@ -35,9 +35,9 @@
 3. **Конец**.
 
 ### Блок-схема
-![Блок-схема алгоритма](lab_7_schema.png) 
+![Блок-схема алгоритма](lab_7_schema(1).png) 
 
-https://github.com/stzraw/lab-7-VSTU-HW/blob/main/lab_7_schema.png
+https://github.com/stzraw/lab-7-VSTU-HW/blob/main/lab_7_schema(1).png
 
 ## 2. Реализация программы
 

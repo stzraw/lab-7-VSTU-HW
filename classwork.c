@@ -3,34 +3,24 @@
 #include <locale.h>
 #include <math.h>
 
-int task1();
-int task2();
-int task3();
-
 int simvol(char c);
 float kalk(float x, char c, float y);
 int slovo(int n);
 
 int main()
 {
-    setlocale(LC_ALL, ".UTF8");
-    task1();
-    task2();
-    task3();
-    return 0;
-}
+    char c1, op;
+    int res1, n, res3;
+    float x, y, res2;
 
-int task1()
-{
-    char c;
-    int res;
+    setlocale(LC_ALL, ".UTF8");
 
     printf("Задание 1:\n");
     printf("Введите символ: ");
-    scanf(" %c", &c);
-    res = simvol(c);
+    scanf(" %c", &c1);
+    res1 = simvol(c1);
 
-    switch (res)
+    switch (res1)
     {
         case 1:
             printf("это цифра\n");
@@ -42,45 +32,32 @@ int task1()
             printf("Неизвестный символ\n");
             break;
     }
-    return 0;
-}
-
-int task2()
-{
-    float x, y, res;
-    char c;
 
     printf("\nЗадание 2:\n");
-    printf("Введите выражение (например, 2+3 или 2^3): ");
-    scanf("%f%c%f", &x, &c, &y);
+    printf("Введите выражение (например, 2+3 или 2 ^ 3): ");
+    scanf("%f %c%f", &x, &op, &y);
 
-    if (c == '/' && y == 0.0f)
+    if (op == '/' && y == 0.0f)
     {
         printf("Ошибка: деление на ноль\n");
     }
-    else if (c != '+' && c != '-' && c != '*' && c != '/' && c != '^')
+    else if (op != '+' && op != '-' && op != '*' && op != '/' && op != '^')
     {
         printf("Ошибка: неизвестная операция\n");
     }
     else
     {
-        res = kalk(x, c, y);
-        printf("=%.2f\n", res);
+        res2 = kalk(x, op, y);
+        printf("=%.2f\n", res2);
     }
-    return 0;
-}
-
-int task3()
-{
-    int n, res;
 
     printf("\nЗадание 3 (ДЗ):\n");
     printf("Введите цифру (0-9): ");
     scanf("%d", &n);
 
-    res = slovo(n);
+    res3 = slovo(n);
 
-    switch (res)
+    switch (res3)
     {
         case 0:
             printf("0 - zero\n");
